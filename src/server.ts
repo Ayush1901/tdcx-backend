@@ -51,7 +51,7 @@ const StartServer = () => {
 
   http
     .createServer(router)
-    .listen(config.server.port, () =>
+    .listen(process.env.port || config.server.port, () =>
       console.log(`server is running at port ${config.server.port}`)
     );
 };
