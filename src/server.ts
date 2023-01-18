@@ -17,7 +17,7 @@ const limiter = rateLimit({
      429 - Too many Requests <br> Try again later!
     </h1>`,
 });
-
+mongoose.set("strictQuery", false);
 mongoose
   .connect(`${process.env.MONGO_DB_URL}`, {
     retryWrites: true,
